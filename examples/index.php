@@ -178,20 +178,11 @@ include_once('../BootyCal.php');
 			<div class="span1"></div>
 			<div class="span5">
 				<?php
-				// Setup a new calendar and
-				$cal = new BootyCal();
-				
-				// rename all the days in one go
-				$cal->day_names(array( 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'));
-				
-				// rename all the months in one go
-				$cal->month_names(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','December'));
-				
-				// Or just rename the values that needs 
-				$cal->december('Christmas')
-				$cal->sunday('Zzz')
-				
-				// Output as 
+				echo BootyCal::make()
+						->month(12)
+						->december('Christmas')
+						->sunday('Zzz')
+						->render();
 				?>
 			</div>
 		</div>

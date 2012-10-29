@@ -46,13 +46,13 @@ Add link/highlight days:
 // Would display calendar for December month with day 24 linked to #hohoho
 echo BootyCal::make()->link(24, 12, 2012, '#hohoho')->render();
 
-// Would display calendars for October and December linking Halloween and Christmas
+// Would display calendars for October, November and December linking Halloween and Christmas
 echo BootyCal::make()
 		->link(24, 12, 2012, '#hohoho')
 		->link(31, 10, 2012, '#trickortreat')
 		->render();
 
-// Would only show december not displaying the second link
+// Would only show December not displaying the second link being out of range
 echo BootyCal::make()
 		->month(12, 2012)
 		->link(24, 12, 2012, '#hohoho')
@@ -116,6 +116,15 @@ echo BootyCal::make(array(
 	),
 	'separator' => '<hr>'
 ))->render();
+```
+ 
+Simpe jQuery implementation example:
+ 
+```php
+<?php
+// Would display calendar with id 'my_calendar' for December month with day 24 linked to #hohoho
+echo BootyCal::make()->id('my_calendar')->link(24, 12, 2012, '#hohoho')->render();
+```
 
 ```javascript
 // When a linked day is clicked, alert information about that day
@@ -147,7 +156,7 @@ $(document).ready(function(){
 });
 ```
 
-// Output well-formatted HTML source code for review
+Output well-formatted HTML source code for review
 
 ```php
 <?php
