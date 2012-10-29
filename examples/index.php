@@ -1,3 +1,6 @@
+<?php
+include_once('../BootyCal.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +71,6 @@
 			<div class="span1"></div>
 			<div class="span5">
 				<?php
-				include_once('BootyCal.php');
 				echo BootyCal::make()->render();
 				?>
 			</div>
