@@ -4,17 +4,23 @@
 */
 
 class BootyCal {
+	// Range
 	private $start_year;
 	private $start_month;
 	private $end_year;
 	private $end_month;
-	private $separator;
+
+	// Labels
 	private $day_names;
 	private $month_names;
+	
+	// Other
+	private $separator;
 	private $links;
-	private $id;
-	private $class_name;
+	private $calendar_attributes;
 	private $auto_mode;
+
+	// Constructor and factory method
 
 	public function __construct($properties = array()) {
 		// Default values
@@ -23,8 +29,7 @@ class BootyCal {
 		$this->start_month = null;
 		$this->end_month = null;
 		$this->separator = '';
-		$this->class_name = 'booty';
-		$this->id = '';
+		$this->calendar_attributes = array('class' => 'booty');
 		$this->links = array();
 		$this->auto_mode = true;
 
@@ -60,32 +65,11 @@ class BootyCal {
 		}
 	}
 
-	public function __call($method, $parameters) {
-		// This method accepts the following dynamic calls
-		// monday-sunday, january-december
-		
-		// Create an array with 0 => sunday, 1 => monday, etc
-		$weekdays_and_keys = array_flip(array('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'));
-		
-		// Create an array with 0 => january, 1 => february, etc
-		$months_and_keys = array_flip(array('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'));
-
-		if(array_key_exists($method, $weekdays_and_keys)) {
-			$day_name_key = $weekdays_and_keys[$method];
-			$this->day_names[$day_name_key] = $parameters[0];
-		} else if(array_key_exists($method, $months_and_keys)) {
-			$month_name_key = $months_and_keys[$method];
-			$this->month_names[$month_name_key] = $parameters[0];
-		} else {
-			throw new Exception($method . " is not valid method", 1);
-		}
-		
-		return $this;
-	}
-
 	public static function make($properties = array()) {
 		return new self($properties);
 	}
+
+	// Setting dates and ranges
 
 	public function month($month = null, $year = null) {
 		$this->auto_mode = false;
@@ -120,12 +104,8 @@ class BootyCal {
 		return $this;
 	}
 
-	public function separator($separator) {
-		$this->separator = $separator;
-		
-		return $this;
-	}
-
+	// Creating links
+	
 	public function link($day = null, $month = null, $year = null, $href = '#') {
 		if($this->auto_mode) {
 			if(is_null($this->start_year) || $year < $this->start_year)
@@ -157,6 +137,14 @@ class BootyCal {
 
 		return $this;
 	}
+
+	// Seperator and label setters
+
+	public function separator($separator) {
+		$this->separator = $separator;
+		
+		return $this;
+	}
 	
 	public function day_names($day_names) {
 		if (!is_array($day_names) || count($day_names) != 7) {
@@ -176,17 +164,15 @@ class BootyCal {
 		return $this;
 	}
 
-	public function id($id) {
-		$this->id = $id;
+	// Table attribute setter
 
+	public function attribute($key, $value) {
+		$this->calendar_attributes[$key] = $value;
+		
 		return $this;
 	}
-	
-	public function class_name($class_name) {
-		$this->class_name = $class_name;
 
-		return $this;
-	}
+	// Render methods
 
 	public function render($show_source = false) {
 		$calendars = array();
@@ -242,9 +228,8 @@ class BootyCal {
 		$week_days_counter = 0;
 		$day_counter = 0;
 		
-		// Start the table with appropriate attributes
-		$calendar_attributes = array('class' => $this->class_name, 'id' => $this->id);
-		$calendar = self::tag('table', null, $calendar_attributes) . "\n";
+		// Create the table element
+		$calendar = self::tag('table', null, $this->calendar_attributes) . "\n";
 		
 		// Add the caption
 		$calendar .= "	<caption>$month_name $year</caption>\n";
@@ -330,6 +315,38 @@ class BootyCal {
 		
 		return $heading;
 	}
+
+	// Dynamic method calls
+
+	public function __call($method, $parameters) {
+		// This method accepts the following dynamic calls
+		// monday-sunday, january-december, id, class_name, style, border
+
+		// Table attributes with shortcuts
+		$updatable_table_attributes = array('id', 'class', 'style', 'border');
+		
+		// Create an array with 0 => sunday, 1 => monday, etc
+		$weekdays_and_keys = array_flip(array('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'));
+		
+		// Create an array with 0 => january, 1 => february, etc
+		$months_and_keys = array_flip(array('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'));
+
+		if(array_key_exists($method, $weekdays_and_keys)) {
+			$day_name_key = $weekdays_and_keys[$method];
+			$this->day_names[$day_name_key] = $parameters[0];
+		} else if(array_key_exists($method, $months_and_keys)) {
+			$month_name_key = $months_and_keys[$method];
+			$this->month_names[$month_name_key] = $parameters[0];
+		} else if(in_array($method, $updatable_table_attributes)) {
+			$this->attribute($method, $parameters[0]);
+		} else {
+			throw new Exception($method . " is not valid method", 1);
+		}
+		
+		return $this;
+	}
+	
+	// Static tools
 
 	public static function tag($tag, $value = null, $attributes = array()) {
 		// Remove empty parameters
