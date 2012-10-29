@@ -122,11 +122,12 @@ Simpe jQuery implementation example:
 
 ```php
 <?php
-// Would display calendar with id 'my_cal' for December month with day 24 linked to #hohoho
-echo BootyCal::make()->id('my_cal')->link(24, 12, 2012, '#hohoho')->render();
+// Would display calendar with id 'my_calendar' for December month with day 24 linked to #hohoho
+echo BootyCal::make()->id('my_calendar')->link(24, 12, 2012, '#hohoho')->render();
 ```
 
 ```javascript
+// When a linked day is clicked, alert information about that day
 $(document).ready(function(){
 	$('#my_calendar a').click(function(e) {
 		// Get all available attribute values
@@ -149,6 +150,7 @@ $(document).ready(function(){
 			'Day name: ' + day_name
 		);
 		
+		// prevent the link from firing
 		return false;
 	});
 });
