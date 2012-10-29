@@ -191,8 +191,7 @@ include_once('../BootyCal.php');
 				$cal->december('Christmas')
 				$cal->sunday('Zzz')
 				
-				// Output as normal
-				$cal->render();
+				// Output as 
 				?>
 			</div>
 		</div>

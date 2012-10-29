@@ -6,14 +6,14 @@ Generate calendars with PHP
 Usage
 -----
 
-A quick example displaying calendar for current month:
+A quick example displaying a calendar for current month:
 
 ```php
 <?php
 echo BootyCal::make()->render();
 ```
 
-alternatively using constructor:
+alternatively using the constructor:
 
 ```php
 <?php
@@ -31,11 +31,11 @@ echo BootyCal::make()->month(7)->render();
 // Pick specific year, month
 echo BootyCal::make()->month(12, 2013)->render();
 
-// Pick a range
+// Pick a range displaying multiple calendars
 echo BootyCal::make()->from(11, 2012)->to(12, 2013)->render();
 
-// Divide months with custom divider
-echo BootyCal::make()->from(11, 2012)->to(12, 2013)->divider('a')->render();
+// Divide multiple months using custom divider-markup
+echo BootyCal::make()->from(11, 2012)->to(12, 2013)->divider('<hr>')->render();
 
 ```
 
@@ -78,14 +78,14 @@ $cal->december('Christmas');
 $cal->sunday('Zzz');
 
 // Output as normal
-$cal->render();
+echo $cal->render();
 ```
 
 Alternative setup using an object:
 
 ```php
 <?php
-// Renders march, april in german with day linked in each
+// Renders march, april separated with hr in German with one day linked in each month
 echo BootyCal::make(array(
 	'day_names' => array(
 		'Mo',
@@ -116,4 +116,40 @@ echo BootyCal::make(array(
 	),
 	'separator' => '<hr>'
 ))->render();
+```
+
+Simpe jQuery implementation example:
+
+```php
+<?php
+// Would display calendar with id 'my_cal' for December month with day 24 linked to #hohoho
+echo BootyCal::make()->id('my_cal')->link(24, 12, 2012, '#hohoho')->render();
+```
+
+```javascript
+$(document).ready(function(){
+	$('#my_calendar a').click(function(e) {
+		// Get all available attribute values
+		var id = $(this).attr('id');
+		var href = $(this).attr('href');
+		var day = $(this).attr('data-day');
+		var month = $(this).attr('data-month');
+		var year = $(this).attr('data-year');
+		var month_name = $(this).attr('data-month-name');
+		var day_name = $(this).attr('data-day-name');
+
+		// Alert all values
+		alert(
+			'Id: ' + id + '\n' +
+			'Href: ' + href + '\n' +
+			'Day: ' + day + '\n' +
+			'Month: ' + month +'\n' +
+			'Year: ' + year + '\n' +
+			'Month name: ' + month_name + '\n' +
+			'Day name: ' + day_name
+		);
+		
+		return false;
+	});
+});
 ```
