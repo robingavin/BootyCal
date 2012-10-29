@@ -217,7 +217,7 @@ include_once('../BootyCal.php');
 						'September',
 						'Oktober',
 						'November',
-						'December'
+						'Dezember'
 					),
 					'links' => array(
 						array(5, 3, 2012, '#party'),

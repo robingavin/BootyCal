@@ -71,7 +71,7 @@ $cal = new BootyCal()->month(12);
 $cal->day_names(array('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'));
 
 // rename all the months in one go
-$cal->month_names(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','December'));
+$cal->month_names(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','Dezember'));
 
 // Or just rename some individual months or days of the week
 $cal->december('Christmas');
@@ -108,7 +108,7 @@ echo BootyCal::make(array(
 		'September',
 		'Oktober',
 		'November',
-		'December'
+		'Dezember'
 	),
 	'links' => array(
 		array(15, 3, 2012, '#party'),
