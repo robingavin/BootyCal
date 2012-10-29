@@ -1,7 +1,7 @@
 BootyCal
 ========
 
-Generate calendars with PHP
+BootyCal is a single PHP class (5.1 or higher) to quickly and elegantly output calendars with individual days linked/highlighted. The markup for the calendar is very simple and easy to customize using CSS and possibly Javascript.
 
 Usage
 -----
@@ -67,13 +67,13 @@ Alternative labels / translations:
 // Setup a new calendar for december and
 $cal = new BootyCal()->month(12);
 
-// rename all the days in one go
+// rename all the days of the week in one go
 $cal->day_names(array( 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'));
 
 // rename all the months in one go
 $cal->month_names(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','December'));
 
-// Or just rename the values that needs 
+// Or just rename some individual months or days of the week
 $cal->december('Christmas');
 $cal->sunday('Zzz');
 
@@ -116,15 +116,6 @@ echo BootyCal::make(array(
 	),
 	'separator' => '<hr>'
 ))->render();
-```
-
-Simpe jQuery implementation example:
-
-```php
-<?php
-// Would display calendar with id 'my_calendar' for December month with day 24 linked to #hohoho
-echo BootyCal::make()->id('my_calendar')->link(24, 12, 2012, '#hohoho')->render();
-```
 
 ```javascript
 // When a linked day is clicked, alert information about that day
@@ -154,4 +145,12 @@ $(document).ready(function(){
 		return false;
 	});
 });
+```
+
+// Output well-formatted HTML source code for review
+
+```php
+<?php
+// Outputs source for calendar with Christmas Eve linked to #hohoho
+echo BootyCal::make()->link(24, 12, 2012, '#hohoho')->render_source();
 ```
