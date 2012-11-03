@@ -6,8 +6,21 @@ BootyCal is a single PHP class (5.1 or higher) to quickly and elegantly output c
 Usage
 -----
 
-A quick example displaying a calendar for current month:
+Make sure you include the library
 
+```php
+<?php
+include_once('BootyCal.php');
+```
+
+Include the provided CSS:
+
+```html
+<link href="css/booty.css" rel="stylesheet" type="text/css" media="all">
+```
+or enroll your own.
+
+Display a calendar for the current month
 ```php
 <?php
 echo BootyCal::make()->render();

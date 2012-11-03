@@ -25,7 +25,7 @@ include_once('../BootyCal.php');
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-	<link rel="stylesheet" href="css/main.css">
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="all">
 
 	<script src="js/jquery.js"></script>
 	<script src="js/main.js"></script>
