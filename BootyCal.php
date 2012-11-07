@@ -238,11 +238,12 @@ class BootyCal {
 		$calendar .= $this::weekday_heading();
 		
 		// Start the first row
-		$calendar .= "	<tr>\n";
+		$calendar .= "	<tbody>\n";
+		$calendar .= "		<tr>\n";
 
 		// If the month doesn't start on the first day, fill out with empty cells 
 		for($i = 0; $i < $running_day; $i++){
-			$calendar .= "		<td></td>\n";
+			$calendar .= "			<td></td>\n";
 			$week_days_counter++;
 		}
 		
@@ -263,19 +264,19 @@ class BootyCal {
 					'data-day-name' => $this->day_names[$week_days_counter],
 					'data-month-name' => $this->month_names[$month-1],
 				);
-				$calendar .= "		" . self::tag('td', self::tag('a', $list_day, $link_attributes)) . "\n";
+				$calendar .= "			" . self::tag('td', self::tag('a', $list_day, $link_attributes)) . "\n";
 			} else {
-				$calendar .= "		" . self::tag('td', $list_day) . "\n";
+				$calendar .= "			" . self::tag('td', $list_day) . "\n";
 			}
 
 			// Last day of the week
 			if($running_day == 6 ) {
 				// End the week-row
-				$calendar .= "	</tr>\n";
+				$calendar .= "		</tr>\n";
 				
 				// If there are more days, start a new week
 				if(($day_counter + 1) != $days_in_month) {
-					$calendar .= "	<tr>\n";
+					$calendar .= "		<tr>\n";
 				}
 				
 				// Reset week specific counter values
@@ -293,25 +294,24 @@ class BootyCal {
 		if($week_days_counter < 7){
 			$days_left_to_print = (7 - $week_days_counter);
 			for($i = 1; $i <= $days_left_to_print; $i++){
-				$calendar .= "		<td></td>\n";
+				$calendar .= "			<td></td>\n";
 			};
 		};
 		
 		// End the last row and the table
-		$calendar .= "	</tr>\n</table>";
+		$calendar .= "		</tr>\n";
+		$calendar .= "	<tbody>\n";
+		$calendar .= "</table>";
 		
 		return $calendar;
 	}
 	
 	private function weekday_heading() {
-		// Start the row
-		$heading = "	<tr>\n";
-
-		// Implode the headers in to td-elements
-		$heading .= '		<th>' . implode("</th>\n		<th>",$this->day_names) . "</th>\n";
-		
-		// Wrap up the row
-		$heading .= "	</tr>\n";
+		$heading = "	<thead>\n";
+		$heading .= "		<tr>\n";
+		$heading .= '			<th>' . implode("</th>\n			<th>", $this->day_names) . "</th>\n";
+		$heading .= "		</tr>\n";
+		$heading .= "	</thead>\n";
 		
 		return $heading;
 	}
