@@ -25,7 +25,7 @@ include_once('BootyCal.php');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">BootyCal</a>
+        <a class="brand" href="index.php">BootyCal</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li><a href="index.php">About</a></li>

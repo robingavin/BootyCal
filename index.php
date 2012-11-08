@@ -34,7 +34,7 @@ include_once('BootyCal.php');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">BootyCal</a>
+        <a class="brand" href="index.php">BootyCal</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="index.php">About</a></li>
@@ -46,8 +46,11 @@ include_once('BootyCal.php');
     </div>
   </div>
   <div class="container">
-    <h2>Calendars made easy</h2>
-    <p>BootyCal is a simple PHP tool for outputting calendars including the possibility of anchor/link dates.</p>
+    <div class="hero-unit">
+      <h2>Calendars made easy</h2>
+      <p>BootyCal is a simple PHP tool for outputting calendars including the possibility of anchor/link dates.</p>
+      <a href="https://github.com/robingavin/BootyCal" class="btn btn-large btn-primary">Download or fork on Github</a>
+    </div>
 
     <h3>Simple example</h3>
     <div class="row">
@@ -67,9 +70,6 @@ include_once('BootyCal.php');
         ?>
       </div>
     </div>
-
-    <!--div class="row"><hr></div-->
-
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 </body>
 </html>
