@@ -29,7 +29,7 @@ class BootyCal {
     $this->start_month = null;
     $this->end_month = null;
     $this->separator = '';
-    $this->calendar_attributes = array('class' => 'booty');
+    $this->calendar_attributes = array('class' => 'bootycal');
     $this->links = array();
     $this->auto_mode = true;
 

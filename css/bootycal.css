@@ -1,18 +1,6 @@
-body {
-  padding-top: 60px;
-}
-
-.gist {
-  margin-top: 2px;
-}
-
-.span5 hr {
-  width: 100%;
-}
-
 /* ========== BootyCal calendar styles ========== */
 
-table.booty {
+table.bootycal {
   border-collapse: separate;
   border-radius: 0 0 5px 5px;
   border-spacing: 0;
@@ -26,11 +14,11 @@ table.booty {
   width: 100%;
 }
 
-table.booty + table.booty {
+table.bootycal + table.bootycal {
   margin-top: 20px;
 }
 
-table.booty caption {
+table.bootycal caption {
   background: #efefef;
   border-radius: 5px 5px 0 0;
   border: #ccc 1px solid;
@@ -45,27 +33,27 @@ table.booty caption {
   box-sizing: border-box;
 }
 
-table.booty tr:hover td {
+table.bootycal tr:hover td {
   background: #fafafa;
   color: #888;
 }
 
-table.booty th {
+table.bootycal th {
   color: #888;
   font-weight: normal;
   padding: 5px;
 }
 
-table.booty tr td:hover {
+table.bootycal tr td:hover {
   background: white;
   color: #555;
 }
 
-table.booty td:empty:hover {
+table.bootycal td:empty:hover {
   background: #fafafa;
 }
 
-table.booty td {
+table.bootycal td {
   border: #ddd 1px solid;
   border-bottom: 0;
   border-right: 0;
@@ -73,15 +61,15 @@ table.booty td {
   padding: 0;
 }
 
-table.booty tr td:last-child {
+table.bootycal tr td:last-child {
   border-right: #ddd 1px solid;
 }
 
-table.booty tr:last-child td {
+table.bootycal tr:last-child td {
   border-bottom: #ddd 1px solid;
 }
 
-table.booty td a {
+table.bootycal td a {
   background: #e2f1ff;
   color: #0079e4;
   display: block;
@@ -90,7 +78,7 @@ table.booty td a {
   text-decoration: none;
 }
 
-table.booty td a:hover {
+table.bootycal td a:hover {
   background: #CBD9E6;
   text-decoration: underline;
 }

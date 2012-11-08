@@ -136,7 +136,7 @@ Simpe jQuery implementation example:
 ```javascript
 // When a linked day is clicked, alert information about that day
 $(document).ready(function(){
-	$('#my_calendar a').click(function(e) {
+	$('.bootycal a').click(function(e) {
 		// Get all available attribute values
 		var id = $(this).attr('id');
 		var href = $(this).attr('href');

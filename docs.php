@@ -7,28 +7,11 @@ include_once('lib/BootyCal.php');
   <meta charset="utf-8">
   <title>BootyCal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-
-  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <!-- Le fav and touch icons -->
-  <!--link rel="shortcut icon" href="ico/favicon.ico"> TODO
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"-->
-
-  <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
-
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="css/bootycal.css">
+  <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -51,7 +34,9 @@ include_once('lib/BootyCal.php');
     </div>
   </div>
   <div class="container">
-    <h3>More examples</h3>
+    <h3>Docs</h3>
+    
+    <h3>TODO, until then here are some more examples</h3>
     <div class="row">
       <div class="span8">
         <script src="https://gist.github.com/4039774.js?file=gistfile1.php"></script>
@@ -65,6 +50,6 @@ include_once('lib/BootyCal.php');
         ?>
       </div>
     </div>
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 </body>
 </html>

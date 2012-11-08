@@ -7,11 +7,11 @@ include_once('lib/BootyCal.php');
   <meta charset="utf-8">
   <title>BootyCal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="css/bootycal.css">
+  <link rel="stylesheet" href="css/page.css">
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -24,11 +24,6 @@ include_once('lib/BootyCal.php');
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"-->
-
-  <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
-
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -51,13 +46,15 @@ include_once('lib/BootyCal.php');
     </div>
   </div>
   <div class="container">
-    <h2>About</h2>
-    <p>BootyCal is a simple PHP tool for outputting calendars including the possibility to link individual dates.</p>
+    <h2>Calendars made easy</h2>
+    <p>BootyCal is a simple PHP tool for outputting calendars including the possibility of anchor/link dates.</p>
 
     <h3>Simple example</h3>
     <div class="row">
       <div class="span8">
         <script src="https://gist.github.com/4038708.js?file=gistfile1.php"></script>
+        <p>An optional extra step is to include the provided styles</p>
+        
       </div>
       <div class="span4">
         <?php
