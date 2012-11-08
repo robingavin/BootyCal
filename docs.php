@@ -42,36 +42,29 @@ include_once('lib/BootyCal.php');
         <a class="brand" href="#">BootyCal</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="index.php">About</a></li>
+            <li><a href="index.php">About</a></li>
             <li><a href="examples.php">Examples</a></li>
-            <li><a href="docs.php">Docs</a></li>
+            <li class="active"><a href="docs.php">Docs</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
   <div class="container">
-    <h2>About</h2>
-    <p>BootyCal is a simple PHP tool for outputting calendars including the possibility to link individual dates.</p>
-
-    <h3>Simple example</h3>
+    <h3>More examples</h3>
     <div class="row">
       <div class="span8">
-        <script src="https://gist.github.com/4038708.js?file=gistfile1.php"></script>
+        <script src="https://gist.github.com/4039774.js?file=gistfile1.php"></script>
       </div>
       <div class="span4">
         <?php
         echo BootyCal::make()                      // Create
                      ->month(12, 2012)             // Set month
                      ->link(25, 12, 2012, '#hoho') // Link
-                     ->link(31, 12, 2012, '#party')// Link
                      ->render();                   // Render
         ?>
       </div>
     </div>
-
-    <div class="row"><hr></div>
-
     </div> <!-- /container -->
 </body>
 </html>

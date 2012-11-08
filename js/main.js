@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#my_calendar a').click(function(e) {
+	$('.booty a').click(function(e) {
 		// Get all available attribute values
 		var id = $(this).attr('id');
 		var href = $(this).attr('href');

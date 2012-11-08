@@ -81,10 +81,10 @@ Alternative labels / translations:
 $cal = new BootyCal()->month(12);
 
 // rename all the days of the week in one go
-$cal->day_names(array('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'));
+$cal->days(array('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'));
 
 // rename all the months in one go
-$cal->month_names(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','Dezember'));
+$cal->months(array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni','Juli','August','September','Oktober','November','Dezember'));
 
 // Or just rename some individual months or days of the week
 $cal->december('Christmas');
@@ -100,7 +100,7 @@ Alternative setup using an object:
 <?php
 // Renders march, april in German separated with hr with one day linked in each month
 echo BootyCal::make(array(
-	'day_names' => array(
+	'days' => array(
 		'Mo',
 		'Di',
 		'Mi',
@@ -109,7 +109,7 @@ echo BootyCal::make(array(
 		'Sa',
 		'So'
 	),
-	'month_names' => array(
+	'months' => array(
 		'Januar', 
 		'Februar', 
 		'März', 
