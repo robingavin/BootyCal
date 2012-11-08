@@ -1,5 +1,5 @@
 <?php
-include_once('lib/BootyCal.php');
+include_once('BootyCal.php');
 ?>
 <!DOCTYPE html>
 <html>
