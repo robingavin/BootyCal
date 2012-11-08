@@ -1,7 +1,3 @@
-body {
-  padding: 60px 0;
-}
-
 .gist {
   margin-top: 2px;
 }
@@ -17,4 +13,16 @@ td {
 .doc-table-header {
   font-weight: bold;
   font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .row-fluid .span1 {
+    display: none;
+  }
+}
+
+@media (min-width: 979px) {
+  body {
+    padding-top: 60px;
+  }
 }
