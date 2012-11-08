@@ -51,11 +51,12 @@ include_once('lib/BootyCal.php');
 
     <h3>Simple example</h3>
     <div class="row">
-      <div class="span8">
+      <div class="span7">
         <script src="https://gist.github.com/4038708.js?file=gistfile1.php"></script>
         <p>An optional extra step is to include the provided styles</p>
-        
+        <script src="https://gist.github.com/4040701.js?file=gistfile1.html"></script>
       </div>
+      <div class="span1 well" style="width: 10px">=&gt;<br><br>=&gt;<br><br>R<br>E<br>S<br>U<br>L<br>T<br><br>=&gt;<br><br>=&gt;</div>
       <div class="span4">
         <?php
         echo BootyCal::make()                      // Create
