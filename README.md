@@ -16,7 +16,7 @@ include_once('BootyCal.php');
 Include the provided CSS:
 
 ```html
-<link href="css/booty.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/bootycal.css" rel="stylesheet" type="text/css" media="all">
 ```
 or enroll your own.
 
