@@ -68,7 +68,7 @@ include_once('BootyCal.php');
       </div>
     </div>
 
-    <div class="row"><hr></div>
+    <!--div class="row"><hr></div-->
 
     </div> <!-- /container -->
 </body>

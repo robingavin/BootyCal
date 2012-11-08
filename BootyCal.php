@@ -86,8 +86,12 @@ class BootyCal {
     return $this;
   }
 
-  public function from($month, $year) {
+  public function from($month, $year = null) {
+    // Prevent link() from stretching the date span
     $this->auto_mode = false;
+
+    // Default to this hear
+    $year = is_null($year) ? date('Y') : $year;
 
     $this->start_year = $year;
     $this->start_month = $month;
@@ -95,8 +99,12 @@ class BootyCal {
     return $this;
   }
 
-  public function to($month, $year) {
+  public function to($month, $year = null) {
+    // Prevent link() from stretching the date span
     $this->auto_mode = false;
+
+    // Default to this hear
+    $year = is_null($year) ? date('Y') : $year;
 
     $this->end_year = $year;
     $this->end_month = $month;

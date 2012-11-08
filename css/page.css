@@ -9,3 +9,12 @@ body {
 .span5 hr {
   width: 100%;
 }
+
+td {
+  max-width: 400px;
+}
+
+.doc-table-header {
+  font-weight: bold;
+  font-style: italic;
+}

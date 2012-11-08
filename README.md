@@ -61,16 +61,16 @@ echo BootyCal::make()->link(24, 12, 2012, '#hohoho')->render();
 
 // Would display calendars for October, November and December linking Halloween and Christmas
 echo BootyCal::make()
-		->link(24, 12, 2012, '#hohoho')
-		->link(31, 10, 2012, '#trickortreat')
-		->render();
+      ->link(24, 12, 2012, '#hohoho')
+      ->link(31, 10, 2012, '#trickortreat')
+      ->render();
 
 // Would only show December not displaying the second link being out of range
 echo BootyCal::make()
-		->month(12, 2012)
-		->link(24, 12, 2012, '#hohoho')
-		->link(31, 10, 2012, '#trickortreat')
-		->render();
+      ->month(12, 2012)
+      ->link(24, 12, 2012, '#hohoho')
+      ->link(31, 10, 2012, '#trickortreat')
+      ->render();
 ```
 
 Alternative labels / translations:
@@ -100,66 +100,66 @@ Alternative setup using an object:
 <?php
 // Renders march, april in German separated with hr with one day linked in each month
 echo BootyCal::make(array(
-	'days' => array(
-		'Mo',
-		'Di',
-		'Mi',
-		'Do',
-		'Fr',
-		'Sa',
-		'So'
-	),
-	'months' => array(
-		'Januar', 
-		'Februar', 
-		'März', 
-		'April', 
-		'Mai', 
-		'Juni',
-		'Juli',
-		'August',
-		'September',
-		'Oktober',
-		'November',
-		'Dezember'
-	),
-	'links' => array(
-		array(15, 3, 2012, '#party'),
-		array(20, 4, 2012, '#concert')
-	),
-	'separator' => '<hr>'
+  'days' => array(
+    'Mo',
+    'Di',
+    'Mi',
+    'Do',
+    'Fr',
+    'Sa',
+    'So'
+  ),
+  'months' => array(
+    'Januar', 
+    'Februar', 
+    'März', 
+    'April', 
+    'Mai', 
+    'Juni',
+    'Juli',
+    'August',
+    'September',
+    'Oktober',
+    'November',
+    'Dezember'
+  ),
+  'links' => array(
+    array(15, 3, 2012, '#party'),
+    array(20, 4, 2012, '#concert')
+  ),
+  'separator' => '<hr>'
 ))->render();
 ```
  
-Simpe jQuery implementation example:
+Simple jQuery implementation example:
  
 ```javascript
 // When a linked day is clicked, alert information about that day
 $(document).ready(function(){
-	$('.bootycal a').click(function(e) {
-		// Get all available attribute values
-		var id = $(this).attr('id');
-		var href = $(this).attr('href');
-		var day = $(this).attr('data-day');
-		var month = $(this).attr('data-month');
-		var year = $(this).attr('data-year');
-		var month_name = $(this).attr('data-month-name');
-		var day_name = $(this).attr('data-day-name');
+  $('.bootycal a').click(function(e) {
+    // Get all available attribute values
+    var id = $(this).attr('id');
+    var href = $(this).attr('href');
+    var day = $(this).attr('data-day');
+    var month = $(this).attr('data-month');
+    var year = $(this).attr('data-year');
+    var month_name = $(this).attr('data-month-name');
+    var day_name = $(this).attr('data-day-name');
 
-		// Alert all values
-		alert(
-			'Id: ' + id + '\n' +
-			'Href: ' + href + '\n' +
-			'Day: ' + day + '\n' +
-			'Month: ' + month +'\n' +
-			'Year: ' + year + '\n' +
-			'Month name: ' + month_name + '\n' +
-			'Day name: ' + day_name
-		);
-		
-		// prevent the link from firing
-		return false;
-	});
+    // Alert all values
+    alert(
+      'Id: ' + id + '\n' +
+      'Href: ' + href + '\n' +
+      'Day: ' + day + '\n' +
+      'Month: ' + month +'\n' +
+      'Year: ' + year + '\n' +
+      'Month name: ' + month_name + '\n' +
+      'Day name: ' + day_name
+    );
+    
+    // prevent the link from firing
+    return false;
+  });
 });
 ```
 
