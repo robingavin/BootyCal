@@ -195,7 +195,7 @@ class BootyCal {
 				++$year;
 			}
 
-			if($month > $this->end_month || $year > $this->end_year) {
+			if($year > $this->end_year || ($year >= $this->end_year && $month > $this->end_month)) {
 				break;
 			}
 			

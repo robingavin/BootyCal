@@ -1,5 +1,5 @@
 <?php
-include_once('../BootyCal.php');
+include_once('lib/BootyCal.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,17 +42,15 @@ include_once('../BootyCal.php');
           <a class="brand" href="#">BootyCal</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.php">About</a></li>
+              <li class="active"><a href="examples.php">Examples</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 	<div class="container">
-		<h2>About</h2>
-		<p>BootyCal is a simple PHP tool for outputting calendars including the possibility to link individual dates.</p>
+		<h2>Examples</h2>
 		<h3>Example 1 - Current month</h3>
 		<div class="row">
 			<div class="span6">
