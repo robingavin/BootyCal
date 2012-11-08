@@ -59,7 +59,7 @@ include_once('BootyCal.php');
         <p>An optional extra step is to include the provided styles</p>
         <script src="https://gist.github.com/4040701.js?file=gistfile1.html"></script>
       </div>
-      <div class="span1 well" style="width: 40px; padding-left: 12px">=&gt;<br><br>=&gt;<br><br>R<br>E<br>S<br>U<br>L<br>T<br><br>=&gt;<br><br>=&gt;</div>
+      <div class="span1 well" style="text-align: center">=&gt;<br><br>=&gt;<br><br>R<br>E<br>S<br>U<br>L<br>T<br><br>=&gt;<br><br>=&gt;</div>
       <div class="span4">
         <?php
         echo BootyCal::make()                      // Create

@@ -13,7 +13,7 @@ include_once('BootyCal.php');
   <link rel="stylesheet" href="css/bootycal.css">
   <link rel="stylesheet" href="css/page.css">
 
-  <script src="js/libraries/jquery.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="js/jquery_example.js"></script>
 </head>
 <body>
@@ -120,7 +120,7 @@ include_once('BootyCal.php');
       </div>
     </div>
     
-    <h3>Example 7 - Automatic months from links + Simple jQuery example.</h3>
+    <h3>Example 7 - Simple jQuery example.</h3>
     <div class="row">
       <div class="span8">
         <script src="https://gist.github.com/3968614.js?file=gistfile1.php"></script>
