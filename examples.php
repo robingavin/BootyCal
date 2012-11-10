@@ -14,6 +14,7 @@ include_once('BootyCal.php');
   <link rel="stylesheet" href="css/bootycal.css">
 
   <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery_example.js"></script>
 </head>
 <body>
@@ -31,6 +32,7 @@ include_once('BootyCal.php');
             <li><a href="index.php">About</a></li>
             <li class="active"><a href="examples.php">Examples</a></li>
             <li><a href="docs.php">Docs</a></li>
+            <li><a href="faq.php">Faq</a></li>
           </ul>
         </div>
       </div>

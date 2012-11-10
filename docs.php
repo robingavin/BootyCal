@@ -8,10 +8,13 @@ include_once('BootyCal.php');
   <title>BootyCal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="css/page.css">
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="css/bootycal.css">
-  <link rel="stylesheet" href="css/page.css">
+  
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,6 +31,7 @@ include_once('BootyCal.php');
             <li><a href="index.php">About</a></li>
             <li><a href="examples.php">Examples</a></li>
             <li class="active"><a href="docs.php">Docs</a></li>
+            <li><a href="faq.php">Faq</a></li>
           </ul>
         </div>
       </div>

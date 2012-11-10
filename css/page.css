@@ -15,6 +15,11 @@ td.doc-table-header {
   font-style: italic;
 }
 
+/* FAQ styles */
+.question {
+  font-weight: bold;
+}
+
 /* Footer */
 
 #footer {
@@ -29,6 +34,6 @@ a[rel=license] {
 
 @media (max-width: 768px) {
   .row-fluid .span1 {
-    display: none;
+    display: none !important;
   }
 }
