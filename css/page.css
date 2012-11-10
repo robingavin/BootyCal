@@ -1,28 +1,34 @@
-.gist {
-  margin-top: 2px;
+/* The menu is static, push down the content under it */
+
+body {
+  padding-top: 60px;
 }
 
-.span5 hr {
-  width: 100%;
-}
+/* Table cells on docs.php */
 
 td {
   max-width: 400px;
 }
 
-.doc-table-header {
+td.doc-table-header {
   font-weight: bold;
   font-style: italic;
 }
 
+/* Footer */
+
+#footer {
+  margin: 12px 0;
+}
+
+a[rel=license] {
+  margin-right: 12px;
+}
+
+/* Hide the "result =>" div on the start page on smaller sizes */
+
 @media (max-width: 768px) {
   .row-fluid .span1 {
     display: none;
-  }
-}
-
-@media (min-width: 979px) {
-  body {
-    padding-top: 60px;
   }
 }

@@ -8,10 +8,10 @@ include_once('BootyCal.php');
   <title>BootyCal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="css/page.css">
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="css/bootycal.css">
-  <link rel="stylesheet" href="css/page.css">
 
   <script src="js/jquery.js"></script>
   <script src="js/jquery_example.js"></script>
@@ -192,6 +192,7 @@ include_once('BootyCal.php');
         ?>
       </div>
     </div>
+
     <h3>Example 10 - Outputting source for review</h3>
     <div class="row">
       <div class="span8">
@@ -203,6 +204,8 @@ include_once('BootyCal.php');
         ?>
       </div>
     </div>
-    </div> <!-- /container -->
+
+    <div class="row-fluid" id="footer"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BootyCal</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.jaij.net" property="cc:attributionName" rel="cc:attributionURL">Robin Gavin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</div>
+  </div> <!-- /container -->
 </body>
 </html>

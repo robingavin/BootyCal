@@ -218,18 +218,12 @@ include_once('BootyCal.php');
 
     <h3>Here are some more examples</h3>
     <div class="row">
-      <div class="span8">
+      <div class="span12">
         <script src="https://gist.github.com/4039774.js?file=gistfile1.php"></script>
       </div>
-      <div class="span4">
-        <?php
-        echo BootyCal::make()                      // Create
-                     ->month(12, 2012)             // Set month
-                     ->link(25, 12, 2012, '#hoho') // Link
-                     ->render();                   // Render
-        ?>
-      </div>
     </div>
+    
+    <div class="row-fluid" id="footer"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BootyCal</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.jaij.net" property="cc:attributionName" rel="cc:attributionURL">Robin Gavin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</div>
   </div> <!-- /container -->
 </body>
 </html>
