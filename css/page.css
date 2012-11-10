@@ -13,6 +13,11 @@ td {
 td.doc-table-header {
   font-weight: bold;
   font-style: italic;
+  background-color: #F9F9F9;
+}
+
+th {
+  background-color: #F9F9F9;
 }
 
 /* FAQ styles */

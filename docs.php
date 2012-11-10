@@ -39,7 +39,7 @@ include_once('BootyCal.php');
   </div>
   <div class="container">
     <h3>Docs</h3>
-    <table class="table table-striped table-bordered">
+    <table class="table table-bordered">
       <tr>
         <th>Returns</th>
         <th>Method</th>
