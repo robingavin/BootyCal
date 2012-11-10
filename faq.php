@@ -41,26 +41,24 @@ include_once('BootyCal.php');
     <h3>Faq</h3>
     <hr>
     <div class="row">
-      <div class="span6 question">Why do you have a factory, <em>make()</em>, method when you might as well use <em>new BootyCal</em>?</div>
-      <div class="span6 answer">
-        Because it enables you to chain the construction, configuration process as well as output on one pretty line in case you want to use it right in your view/template without messing up the 
-markup. Remember, using make() to create calendar instances is completely optional.</div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="span6 question">Why are you using the word 'Booty' in the name, isn't that a little offensive?</div>
-      <div class="span6 answer">Yeah…well that's just…you know…your opinion man.</div>
+      <div class="span6 question">Why do you have a factory, <em>make()</em>, method when you might as well use the contructor <em>new BootyCal()</em>?</div>
+      <div class="span6 answer">Because it enables you to chain the construction, configuration process as well as output on one pretty line in case you want to use it right in your view/template without messing up the markup. Remember, using make() to create calendar instances is completely optional.</div>
     </div>
     <hr>
     <div class="row">
       <div class="span6 question">What license is BootyCal licensed under?</div>
       <div class="span6 answer">Creative Commons Attribution 3.0 which means you can basically do whatever you want with it.</div>
-    </div>    
+    </div>
     <hr>
     <div class="row">
       <div class="span6 question">Why are you not using a namespace for BootyCal, that's really unprofessional?</div>
-      <div class="span6 answer">Because it's just one single class and the namespacing in PHP is plain out ugly.</div>
-    </div>    
+      <div class="span6 answer">Because it's just one single class and the namespacing in PHP is plain out ugly. It shouldn't be to much work to put it in a namespace if that's what you want.</div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span6 question">Why are you using the word <em>Booty</em> in the name, isn't that a little offensive?</div>
+      <div class="span6 answer">Yeah…well that's just…you know…your opinion man.</div>
+    </div>
     <hr>
     <div class="row">
       <div class="span6 question"></div>
