@@ -261,6 +261,11 @@ class BootyCal {
       // Check if there is a link attached to that day
       $is_linked = array_key_exists($year, $this->links) && array_key_exists($month, $this->links[$year]) && array_key_exists($list_day, $this->links[$year][$month]);
       
+      // The cell should have the today-class regardless if linked or not
+      $cell_attributes = array(
+        'class' => "$year-$month-$list_day" == date('Y-n-d') ? 'today' : ''
+      );
+
       // Create td with a link or a td with a div
       if($is_linked) {
         $link_attributes = array(
@@ -272,9 +277,10 @@ class BootyCal {
           'data-day-name' => $this->day_names[$week_days_counter],
           'data-month-name' => $this->month_names[$month-1],
         );
-        $calendar .= "      " . self::tag('td', self::tag('a', $list_day, $link_attributes)) . "\n";
+
+        $calendar .= "      " . self::tag('td', self::tag('a', $list_day, $link_attributes), $cell_attributes) . "\n";
       } else {
-        $calendar .= "      " . self::tag('td', $list_day) . "\n";
+        $calendar .= "      " . self::tag('td', $list_day, $cell_attributes) . "\n";
       }
 
       // Last day of the week
