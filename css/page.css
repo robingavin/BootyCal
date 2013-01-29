@@ -6,6 +6,9 @@ body {
 
 /* Table cells on docs.php */
 
+table.lines {
+  width: 100%;
+}
 td {
   max-width: 400px;
 }
