@@ -212,7 +212,7 @@ class BootyCal {
 
     $all_calendars = implode($this->separator, $calendars);
 
-    return $show_source ? '<pre><code>' . htmlspecialchars($all_calendars) . '<code></pre>' : $all_calendars;
+    return $show_source ? '<pre><code>' . htmlspecialchars($all_calendars) . '</code></pre>' : $all_calendars;
   }
 
   public function render_source() {
